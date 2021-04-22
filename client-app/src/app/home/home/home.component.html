@@ -1,0 +1,53 @@
+
+<ul>
+    <li style="float:left"><button disabled="true">Home</button></li>
+    <li style="float:left"><button>Tape</button></li>
+    <li style="float:left"><button>Contact</button></li>
+    <li style="float:right"><button (click)="this.logout()">Logout</button></li>
+    <li style="float:right;display: block;color: white;text-align: center;padding: 14px 16px;text-decoration: none;">{{ this.getLogin() }}</li>
+</ul>
+
+
+
+<form *ngIf="!this.getProfileExists()" class="profile-form" [formGroup]="profileForm">
+    <h1>Full profile</h1>
+    <input placeholder="Name" formControlName="name"/>
+    <input placeholder="Surname" formControlName="surname"/>
+    <input placeholder="Birthday(dd.mm.yyyy)" formControlName="birthday"/>
+    <br>
+    <div>
+        <button (click)="setProfileForm()" [disabled]="!profileForm.valid">Submit</button>
+    </div>
+    
+</form>
+
+<div class="profile-div" *ngIf="this.getProfileExists()">
+
+    <div [hidden]="this.updateVisible" class="profile-card">
+        <label>Name </label>
+        <br>
+        <h2>{{ this.getProfile().name }}</h2>
+        <label>Surname </label>
+        <br>
+        <h2>{{ this.getProfile().surname }}</h2>
+        <label>Birthday </label>
+        <br>
+        <h2>{{ this.getProfile().birthday }}</h2>
+        <br>
+        <button (click)="changeVisible()">Update</button>
+    </div>
+
+<form [hidden]="!this.updateVisible" [formGroup]="profileForm">
+    <h1>Update profile</h1>
+    <input placeholder="Name" formControlName="name"/>
+    <input placeholder="Surname" formControlName="surname"/>
+    <input placeholder="Birthday(dd.mm.yyyy)" formControlName="birthday"/>
+    <br>
+    <div>
+        <button (click)="setProfileForm()">Submit</button>
+        <button (click)="changeVisible()">Return</button>
+    </div>
+    
+</form>
+
+</div>

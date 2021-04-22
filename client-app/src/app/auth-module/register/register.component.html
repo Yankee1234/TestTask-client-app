@@ -1,0 +1,17 @@
+<form class="text-center border border-light p-5" [formGroup]="registerForm">
+
+    <p class="h4 mb-4">Login</p>
+  
+    <input class="form-control mb-4" placeholder="Login(6-20 symbols)" formControlName="login">
+
+    <input class="form-control mb-4" placeholder="Email" formControlName="email">
+  
+    <input type="password" class="form-control mb-4" placeholder="Password(min 6 symbols)" formControlName="password">
+
+    <button mdbBtn color="info" block="true" class="my-4" type="button" (click)="onSubmit()" [disabled]="!registerForm.valid">Login</button>
+  
+    <p>Have an account?
+      <a (click)="redirectToLogin()">Login</a>
+    </p>
+  
+  </form>

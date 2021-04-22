@@ -1,0 +1,122 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li button {
+    display: block;
+    color: white;
+    background-color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition-duration: 0.4s;
+  }
+
+  li button:disabled {
+      color: gray;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+
+  li button:hover {
+    background-color:gray; /* Green */
+    color: white;
+  }
+
+  li {
+    border-right: 1px solid #bbb;
+  }
+  
+  li:last-child {
+    border-right: none;
+  }
+
+  .profile-form {
+      text-align: center;
+      display: block;
+      margin: 10% 35% auto 35%;
+      border: 3px solid black;
+      border-radius: 10px;
+  }
+
+  .profile-form input {
+      border: 2px solid black;
+      border-radius: 10px;
+      text-align: center;
+      margin: 10px auto;
+      display:block;
+  }
+
+  .profile-form button {
+      border: 2px solid green;
+      border-radius: 10px;
+      text-align: center;
+      margin: 10px auto;
+      display: block;
+      background-color: limegreen;
+      color: black;
+  }
+
+  .profile-form button:disabled {
+    border: 2px solid green;
+      border-radius: 10px;
+      text-align: center;
+      margin: 10px auto;
+      display: block;
+      background-color: limegreen;
+      color: gray;
+  }
+
+  .profile-div {
+      display: block;
+      border: 2px black;
+      border-radius: 10px;
+      color: black;
+      margin: 10% 30% auto 30%;
+  }
+
+  .profile-card {
+    display: block;
+    color: black;
+  }
+
+  .profile-div form {
+      display: block;
+      border: 2px black;
+      border-radius: 10px;
+      color: black;
+      text-align: center;
+  }
+
+  .profile-div form input {
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px auto;
+    display:block;
+  }
+
+  .profile-div form button {
+    border: 2px solid green;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px auto;
+    display: block;
+    background-color: limegreen;
+    color: black;
+  }
+
+  .profile-card button {
+    border: 2px solid green;
+      border-radius: 10px;
+      text-align: center;
+      margin: 10px auto;
+      display: block;
+      background-color: limegreen;
+      color: black;
+  }
+
